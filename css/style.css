@@ -1,0 +1,54 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Lobster', cursive;
+}
+
+input {
+	width:50%;
+	padding:1em;
+	border:solid 1px grey;
+	border-radius: 5px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-row: 1fr 1fr 1fr 1fr;
+
+}
+
+li {
+	list-style-type: none;
+}
+
+.user__card {
+	display: flex;
+	flex-direction:column;
+  border: solid 1px grey;
+  border-radius:5px;
+  margin: .5em;
+	padding:1em;
+	justify-content:center;
+	align-content:center;
+}
+
+h1,
+p {
+	text-transform:capitalize;
+}
+
+
+.user__image {
+	border-radius:50%;
+	width:40%;
+}
+
+.selected {
+	display: block;
+}
+
+
+
+.removed {
+	display: none;
+}
