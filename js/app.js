@@ -4,17 +4,24 @@ $(document).ready(function(){
 			.then(response => response.json())
 			.then(data => display(data.results));
 
-		function display (userData) {
+		function display (data) {
 
-			userData.forEach(user => {
+			data.forEach(user => {
 			let $card = $('<ul class="user__card">');
 	    $card.appendTo($directory);
 	    $card.append(`<li><img class='user__image' src=${user.picture.large} /><li>`);
 	    $card.append(`<li><h1 class='user__name'>${user.name.first} ${user.name.last}</h1></li>`);
 	    $card.append(`<li><a class='user__email' href="mailto:${user.email}"> ${user.email} </a></li>`);
 	    $card.append(`<li><p class='user__city'>${user.location.city}</p></li>`);
+		  $card.append(`<div class="more_info">`);
+		  $card.append(`<li class="cell">${data.cell}</li>`);
+			$card.append(`<li class="address">${data.location}</li>`);
+		 	$card.append(`<li class="birthday">Birthday: ${data.date}</li>`);
+			$card.append(`</div>`);
 			$card.append(`</ul>`);
 	  	});
+
+			$(".more_info").hide();
 		}//function ends
 
 		const $cards = $('.user__card');
@@ -33,6 +40,9 @@ $(document).ready(function(){
 			ignore_accents: true,
 			min_chars: 3
 		});
+
+
+
 
 
 

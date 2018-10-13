@@ -2,9 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <link rel="stylesheet" href="rebox/jquery-rebox.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-
     <title>API to Employee directory</title>
   </head>
   <body>
@@ -13,12 +13,29 @@
 		<input type="text" id="search" data-toggle="hideseek" name="search" data-list=".list" placeholder="Search..."/>
 
     <div class="list"></div>
-		<div id="overlay"></div>
+
 
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="HideSeek/jquery.hideseek.min.js"></script>
+    <script src="rebox/jquery-rebox.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
+
+
+<!-- `
+  <li class="userCard">
+       <img class="img" src="${data.picture.large}" alt="image of employee" picture"">
+       <div class="info">
+           <p class="name">${data.name.first} ${data.name.last}</p>
+           <p class="email">${data.email}</p>
+           <p class=" city">${data.location.city}</p>
+       </div>
+       <div class="more_info">
+           <div class="phone">${data.phone}</div>
+           <div class="address">${data.location.street}, ${abbreaviator(data.location.state)} ${data.location.postcode}</div>
+           <div class="birthday">Birthday: ${createBirthDay(data.dob.date)}</div>
+       </div>
+   </li>
+` -->

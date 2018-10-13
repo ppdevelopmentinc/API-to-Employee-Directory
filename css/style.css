@@ -3,10 +3,14 @@
 	font-family: 'Lobster', cursive;
 }
 
+.container {
+	background: #e1e1ea;
+}
+
 input {
 	width:50%;
 	padding:1em;
-	border:solid 1px grey;
+	border:solid 1px grey;;
 	border-radius: 5px;
 }
 
@@ -24,12 +28,13 @@ li {
 .user__card {
 	display: flex;
 	flex-direction:column;
-  border: solid 1px grey;
+  border: solid 1px #e1e1ea;
   border-radius:5px;
   margin: .5em;
 	padding:1em;
 	justify-content:center;
 	align-content:center;
+	background: white;
 }
 
 h1,
@@ -42,13 +47,11 @@ p {
 	border-radius:50%;
 	width:40%;
 }
+.user__card:hover {
 
-.selected {
-	display: block;
+
 }
 
-
-
-.removed {
-	display: none;
+.user__card:active {
+	display: center
 }
