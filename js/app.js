@@ -21,6 +21,8 @@ $(document).ready(function(){
 			$card.append(`</ul>`);
 	  	});
 
+			$(".user__card").rebox();
+
 			$(".more_info").hide();
 		}//function ends
 
@@ -34,6 +36,8 @@ $(document).ready(function(){
 			console.log($input)
 
 		});//end of search
+
+		console.log($(".user__card"))
 
 
 		$search.hideseek({
