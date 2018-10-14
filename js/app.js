@@ -43,22 +43,21 @@ $(document).ready(function(){
 
 
 					$('.right').on('click', function(e){
-						// show next user
-						$(".overlay .user__card").remove();
-						let next = next().appendTo($overlay);
 
-					});//listener ends
+						 $(".overlay .user__card").addClass("hide");
+						 let nextUser = $('.user__card').next().clone();
+						 $overlay.append(nextUser);
 
-					$('.left').on('click', function(e){
-						// show previous user
-						$(".overlay .user__card").remove();
-						let next = next().appendTo($overlay);
+				  });//listener ends
 
-					});//listener ends
+				  $('.left').on('click', function(e){
+
+						 $(".overlay .user__card").addClass("hide");
+						 let prevUser = $('.user__card').prev().clone();
+						 $overlay.append(prevUser);
+				  });//listener ends
 
 				});//listener ends
-
-
 
 				$('.cross').on('click', function(e){
 

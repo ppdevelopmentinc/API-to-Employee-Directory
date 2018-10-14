@@ -21,6 +21,7 @@ body, html {
 
 .header h1 {
 	font-family: 'Lobster', cursive;
+	font-size: 4em;
 	width: 100%;
 }
 
@@ -49,13 +50,14 @@ li {
 	display: grid;
 	flex-direction:row;
   border: solid 1px #cacad2;
-  border-radius:5px;
+  border-radius:15px;
   margin: .5em;
-	padding:.5em;
+	padding:2em;
 	justify-content:center;
 	align-content:center;
 	background: white;
-	grid-column-gap: 20px;
+	grid-column-gap: 1em;
+	width: 80%;
 	grid-template-areas:
 	"img h1 h1"
 	"img a a"
@@ -114,7 +116,7 @@ p {
 	 left: 0;
 	 right: 0;
 	 bottom: 0;
-	 background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+	 background-color: rgba(0,0,0,0.6); /* Black background with opacity */
 	 z-index: 2; /* stack order */
 	 cursor: pointer; /* Add a pointer on hover */
 }
@@ -122,9 +124,65 @@ p {
 
 
 .overlay .user__card {
-	display: block;
-	margin: 4em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin: 0 auto;
 	padding: 1em;
+	width: 30%;
+	height: 50%;
+	grid-template-areas:
+	". img img . "
+	". h1 h1 ."
+	". p  p ."
+	". a  a ."
+	". li li ."
+	". li li .";
+
+}
+
+.overlay .user__card h1 {
+	font-size: 1em;
+	grid-area: h1;
+	margin:  3em auto;
+  width: 50%;
+  padding: 10px;
+	font-size: 2em;
+	text-align: center;
+}
+
+.overlay .user__card img {
+	grid-area: img;
+	margin: auto;
+  padding: 10px;
+
+}
+
+.overlay .user__card p {
+	grid-area: p;
+	margin: auto;
+  width: 100%;
+  padding: 10px;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.overlay .user__card a {
+	grid-area: a;
+	margin: auto;
+  width: 100%;
+  padding: 10px;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.overlay .user__card li {
+	text-transform:capitalize;
+	margin: auto;
+  width: 50%;
+	text-align: center;
+  padding: 10px;
+	font-size: 1.5em;
 }
 
 .hide {
@@ -138,6 +196,7 @@ button {
   background: transparent;
   border: 0;
   outline:0;
+	z-index: 3;
 }
 
 svg {
@@ -145,12 +204,8 @@ svg {
 }
 
 .arrow {
-  position: relative;
-  top: 50%;
-  margin-top: -45px;
-  margin-left: -35px;
-  width: 70px;
-  height: 90px;
+  position: absolute;
+	padding-top: 50em;
 }
 
 .left {
@@ -184,13 +239,13 @@ svg {
 }
 
 .cross {
-	width: 25px;
+	width: 4em;
 	display: block;
 }
 
 .close-x {
-  stroke: black;
+  stroke: white;
   fill: transparent;
   stroke-linecap: round;
-  stroke-width: 5;
+  stroke-width: 10;
 }
