@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta name="viewport" content="width=device-width, inital-scale=1.0">
-    <link rel="stylesheet" href="rebox/jquery-rebox.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
@@ -15,30 +14,36 @@
 		<span><input type="text" id="search" data-toggle="hideseek" name="search" data-list=".list" placeholder="Search..."/></span>
     </div>
 
-    <div class="list"></div>
+    <div class="list">
+      <div class="overlay hide">
+
+          <div class="cross">
+            <svg viewbox="0 0 40 40">
+              <path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
+            </svg>
+          </div>
+
+          <button class="arrow left">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+              <polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
+            45.63,75.8 0.375,38.087 45.63,0.375 "/>
+            </svg>
+          </button>
+          <button class="arrow right">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+              <polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
+            0.375,0.375 45.63,38.087 0.375,75.8 "/>
+            </svg>
+          </button>
+          <button>
+
+      </div>
+    </div>
 
 
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="HideSeek/jquery.hideseek.min.js"></script>
-    <script src="rebox/jquery-rebox.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
-
-
-<!-- `
-  <li class="userCard">
-       <img class="img" src="${data.picture.large}" alt="image of employee" picture"">
-       <div class="info">
-           <p class="name">${data.name.first} ${data.name.last}</p>
-           <p class="email">${data.email}</p>
-           <p class=" city">${data.location.city}</p>
-       </div>
-       <div class="more_info">
-           <div class="phone">${data.phone}</div>
-           <div class="address">${data.location.street}, ${abbreaviator(data.location.state)} ${data.location.postcode}</div>
-           <div class="birthday">Birthday: ${createBirthDay(data.dob.date)}</div>
-       </div>
-   </li>
-` -->

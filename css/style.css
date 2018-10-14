@@ -103,3 +103,94 @@ p {
 	border-radius:50%;
 	width:40%;
 }
+
+/* Overlay */
+
+.overlay {
+	 position: fixed; /* Sit on top of the page content */ /* Hidden by default */
+	 width: 100%; /* Full width (cover the whole page) */
+	 height: 100%; /* Full height (cover the whole page) */
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+	 z-index: 2; /* stack order */
+	 cursor: pointer; /* Add a pointer on hover */
+}
+
+
+
+.overlay .user__card {
+	display: block;
+	margin: 4em;
+	padding: 1em;
+}
+
+.hide {
+	display: none;
+}
+
+/* Navigation */
+
+button {
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  outline:0;
+}
+
+svg {
+  padding: 5px;
+}
+
+.arrow {
+  position: relative;
+  top: 50%;
+  margin-top: -45px;
+  margin-left: -35px;
+  width: 70px;
+  height: 90px;
+}
+
+.left {
+  left: 10%;
+
+}
+
+.right {
+  left: 90%;
+
+}
+
+.left:hover polyline,
+.left:focus polyline {
+  stroke-width: 3;
+}
+
+.left:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+.right:hover polyline,
+.right:focus polyline {
+  stroke-width: 3;
+}
+
+.right:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+.cross {
+	width: 25px;
+	display: block;
+}
+
+.close-x {
+  stroke: black;
+  fill: transparent;
+  stroke-linecap: round;
+  stroke-width: 5;
+}
