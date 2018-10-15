@@ -24,6 +24,7 @@ $(document).ready(function(){
 
 			$card.append(`</div>`);
 
+
 			function showOverlay() {
 				//run all cards through array
 
@@ -35,39 +36,50 @@ $(document).ready(function(){
 					console.log(current);
 
 
-					$overlay.append($card.clone());
+					let clickedOn = $card.clone(e.currentTarget);
+					$overlay.append(clickedOn);
 					$overlay.removeClass("hide");
 					$('.cell').removeClass("hide");
 					$('.address').removeClass("hide");
 					$('.dob').removeClass("hide");
 
 
+					$('.cross').on('click', function(e){
+
+						clickedOn.remove();
+						$overlay.addClass('hide');
+						$('.cell').addClass("hide");
+						$('.address').addClass("hide");
+						$('.dob').addClass("hide");
+
+					});//listener ends
+
+
+
 					$('.right').on('click', function(e){
 
-						 $(".overlay .user__card").addClass("hide");
-						 let nextUser = $('.user__card').next().clone();
-						 $overlay.append(nextUser);
+						let nextUser = clickedOn.next().clone();
+						console.log(nextUser);
+						$overlay.append(nextUser);
 
-				  });//listener ends
+						clickedOn.remove();
 
-				  $('.left').on('click', function(e){
+					});//listener ends
 
-						 $(".overlay .user__card").addClass("hide");
-						 let prevUser = $('.user__card').prev().clone();
-						 $overlay.append(prevUser);
-				  });//listener ends
+					$('.left').on('click', function(e){
 
-				});//listener ends
+						let nextUser = clickedOn.prev().clone();
+						console.log(nextUser);
+						$overlay.append(nextUser);
 
-				$('.cross').on('click', function(e){
+						clickedOn.remove();
 
-					$(".overlay .user__card").remove();
-					$overlay.addClass('hide');
-					$('.cell').addClass("hide");
-					$('.address').addClass("hide");
-					$('.dob').addClass("hide");
+					});//listener ends
+
 
 				});//listener ends
+
+
 
 
 

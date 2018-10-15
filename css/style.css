@@ -130,7 +130,6 @@ p {
 	margin: 0 auto;
 	padding: 1em;
 	width: 30%;
-	height: 50%;
 	grid-template-areas:
 	". img img . "
 	". h1 h1 ."
