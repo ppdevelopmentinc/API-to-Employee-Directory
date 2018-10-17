@@ -58,7 +58,7 @@ $(document).ready(function(){
 
 					$('.right').on('click', function(e){
 
-						let nextUser = clickedOn.next().clone();
+						let nextUser = clickedOn.closest().nextAll().show();
 						console.log(nextUser);
 						$overlay.append(nextUser);
 
@@ -68,7 +68,7 @@ $(document).ready(function(){
 
 					$('.left').on('click', function(e){
 
-						let nextUser = clickedOn.prev().clone();
+						let nextUser = clickedOn.closest().prevAll().show();
 						console.log(nextUser);
 						$overlay.append(nextUser);
 

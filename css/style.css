@@ -38,7 +38,7 @@ body, html {
 	grid-column-gap: 1em;
 	grid-row-gap: 1em;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-row: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
 
 }
 
@@ -85,7 +85,7 @@ li {
 }
 
 .user__card p {
-	grid-template: p;
+	grid-area: p;
 	margin-right: .5em;
 }
 
