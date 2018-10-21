@@ -58,20 +58,24 @@ $(document).ready(function(){
 
 						$('.right').on('click', function(e){
 
+							clickedOn.remove();
+							$overlay.not('div:last').remove()
 							let nextUser = $card.next('.user__card').clone();
 							console.log(nextUser);
 							$overlay.append(nextUser);
-							clickedOn.remove();
+
+
 
 						});//listener ends
 
 						$('.left').on('click', function(e){
 
+							clickedOn.remove();
 							let prevUser = $card.prev('.user__card').clone();
 							console.log(prevUser);
 							$overlay.append(prevUser);
 
-							clickedOn.remove();
+
 
 						});//listener ends
 
