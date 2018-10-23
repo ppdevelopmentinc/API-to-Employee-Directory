@@ -64,8 +64,6 @@ $(document).ready(function(){
 							console.log(nextUser);
 							$overlay.append(nextUser);
 
-
-
 						});//listener ends
 
 						$('.left').on('click', function(e){
@@ -74,8 +72,6 @@ $(document).ready(function(){
 							let prevUser = $card.prev('.user__card').clone();
 							console.log(prevUser);
 							$overlay.append(prevUser);
-
-
 
 						});//listener ends
 

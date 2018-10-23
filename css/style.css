@@ -28,9 +28,10 @@ body, html {
 .header input {
 	margin: 4em;
 	width:80%;
-	padding:1em;
+	padding:2em;
 	border: solid 1px #cacad2;
 	border-radius: 5px;
+	font-size: 1em;
 }
 
 .list {
@@ -74,17 +75,21 @@ li {
 
 .user__card h1 {
 	font-family: 'Lobster', cursive;
-	font-size: 1em;
+	font-size: 2em;
 	grid-area: h1;
 	margin-right: .5em;
 }
 
 .user__card a {
+	font-size: 1.5em;
+	text-decoration: none;
+	color: inherit;
 	grid-area: a;
 	margin-right: .5em;
 }
 
 .user__card p {
+	font-size: 1.5em;
 	grid-area: p;
 	margin-right: .5em;
 }
