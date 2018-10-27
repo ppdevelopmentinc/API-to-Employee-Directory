@@ -89,11 +89,12 @@ $(document).ready(function(){
 
 		};//function ends
 
+
 		function left() {
 
 			$('.left').on("click", function(e){
-
 				$(".overlay .user__card").hide();
+
 				let attached = $(".active").attr("id");
 				let prevID = parseFloat(attached) -1;
 
@@ -101,16 +102,13 @@ $(document).ready(function(){
 				if (parseFloat(prevID) === -1) {
 					prevID = 11;
 					parseFloat(prevID);
+				};//if statement ends
 
-					let prevDiv = document.getElementById(prevID);
-					console.log(attached);
-					console.log(prevDiv);
+				let prevDiv = document.getElementById(prevID);
+				console.log(attached);
+				console.log(prevDiv);
 
-				};
-
-
-				// clone(prevDiv).appendTo($overlay);
-
+				$overlay.append(prevDiv);
 
 			});//listener ends
 
@@ -120,8 +118,8 @@ $(document).ready(function(){
 
 		$('.right').on("click", function(e){
 
-			$(".overlay .user__card").hide();
 			let attached = $(".active").attr("id");
+			let attachedDiv = $(".active");
 			let nextID = parseFloat(attached) + 1;
 
 
@@ -129,15 +127,18 @@ $(document).ready(function(){
 				nextID = 0;
 				parseFloat(nextID);
 
-				let nextDiv = document.getElementById(nextID);
-				console.log(attached);
-				console.log(nextDiv);
-			};
+			};//if statement ends
 
+			let nextDiv = document.getElementById(nextID);
+			console.log(attached);
+			console.log(nextDiv);
 
-			// clone(nextDiv).appendTo($overlay);
+			$overlay.append(nextDiv);
+			attachedDiv.hide();
+			attachedDiv.removeClass("active");
+			// nextDiv.addClass("active");
 
-		});//listener ends
+	  	});//listener ends
 		};//function ends
 
 		function close() {
@@ -154,9 +155,6 @@ $(document).ready(function(){
 
 		function reset() {
 
-			$('.cell').addClass("hide");
-			$('.address').addClass("hide");
-			$('.dob').addClass("hide");
 		};//function ends
 
 
