@@ -27,14 +27,11 @@ $(document).ready(function(){
 
 			console.log($card);
 
-
-
-
 			});
+
 
 			//Modal
 			show();
-
 
 
 
@@ -96,6 +93,7 @@ $(document).ready(function(){
 				$(".overlay .user__card").hide();
 
 				let attached = $(".active").attr("id");
+				let attachedDiv = $(".active");
 				let prevID = parseFloat(attached) -1;
 
 
@@ -109,6 +107,8 @@ $(document).ready(function(){
 				console.log(prevDiv);
 
 				$overlay.append(prevDiv);
+				attachedDiv.hide();
+				attachedDiv.removeClass("active");
 
 			});//listener ends
 
@@ -130,13 +130,12 @@ $(document).ready(function(){
 			};//if statement ends
 
 			let nextDiv = document.getElementById(nextID);
-			console.log(attached);
 			console.log(nextDiv);
 
 			$overlay.append(nextDiv);
 			attachedDiv.hide();
 			attachedDiv.removeClass("active");
-			// nextDiv.addClass("active");
+
 
 	  	});//listener ends
 		};//function ends
