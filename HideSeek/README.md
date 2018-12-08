@@ -63,5 +63,5 @@ limitations under the License.
   [6]: https://github.com/vdw/HideSeek/issues?utf8=%E2%9C%93&q=label%3Aquestion
   [7]: https://github.com/vdw/HideSeek/issues?utf8=%E2%9C%93&q=label%3Aenhancement
   [8]: https://rawgit.com/
-  [9]: https://cdn.rawgit.com/vdw/HideSeek/master/jquery.hideseek.min.js
-  [10]: https://rawgit.com/vdw/HideSeek/master/jquery.hideseek.min.js
+  [9]: https://cdn.jsdelivr.net/gh/vdw/HideSeek/jquery.hideseek.min.js
+  [10]: https://cdn.jsdelivr.net/gh/vdw/HideSeek/jquery.hideseek.min.js
